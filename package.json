@@ -1,0 +1,28 @@
+{
+  "name": "constructor-word-game",
+  "version": "1.0.0",
+  "description": "Word Guessing Game using Constructors",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rebecalvarez/constructor-word-game.git"
+  },
+  "keywords": [
+    "Word",
+    "Guess",
+    "Game"
+  ],
+  "author": "Rebeca Dodero",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rebecalvarez/constructor-word-game/issues"
+  },
+  "homepage": "https://github.com/rebecalvarez/constructor-word-game#readme",
+  "dependencies": {
+    "cli-color": "^1.4.0",
+    "inquirer": "^6.2.1"
+  }
+}
