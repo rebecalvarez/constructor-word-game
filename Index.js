@@ -15,6 +15,8 @@ var correct = clc.green.bold;
 var incorrect = clc.red.bold;
 // color for the game text;
 var gameTextColor = clc.yellowBright;
+//Pre-defined color for startgamewords
+var startGameMenu = clc.cyanBright;
 
 var userGuessedCorrectly = false;
 
@@ -35,7 +37,7 @@ var wordList = [
     "party"
   ];
 
-  var randomword;
+  var randomWord;
   var someWord;
 
   var wins = 0;
@@ -61,14 +63,14 @@ figlet('Christmas Word Game', function(err, data){
     console.dir(err);
     return;
   }
-  console.log(data);
+  console.log(correct(data));
   //Welcome Screen text
-  console.log(gameTextColor('Welcome to Christmas Word Guess Game'));
+  console.log(startGameMenu('                                  Welcome to Christmas Word Guess Game'));
 
 
   var howToPlay = 
   "==========================================================================================================" + "\r\n" +
-  "How to play" + "\r\n" +
+  "                                                How to play" + "\r\n" +
   "==========================================================================================================" + "\r\n" +
   "When prompted to enter a letter, press any letter (a-z) on the keyboard to guess a letter." + "\r\n" +
   "Keep guessing letters. When you guess a letter, your choice is either correct or incorrect." + "\r\n" +
@@ -78,7 +80,7 @@ figlet('Christmas Word Game', function(err, data){
   "If you correctly guess all the letters in the word before the number of guesses remaining reaches 0, you win." + "\r\n" +
   "If you run out of guesses before the entire word is revealed, you lose. Game over." + "\r\n" +
   "===========================================================================================================" + "\r\n" +
-  "You can exit the game at any time by pressing Ctrl + C on your keyboard." + "\r\n" +
+  "                You can exit the game at any time by pressing Ctrl + C on your keyboard." + "\r\n" +
   "===========================================================================================================" 
   console.log(gameTextColor(howToPlay));
  //Ask user if they are ready to play.
@@ -129,11 +131,11 @@ function startGame(){
 }
 
 function chooseRandomWord(){
-  randomword = wordList[Math.floor(Math.random()* wordList.length)].toUpperCase();
+  randomWord = wordList[Math.floor(Math.random()* wordList.length)].toUpperCase();
   // set the random word chosen to someWord
-  someWord = new Word (randomWord);
+  someWord = new Word(randomWord);
   //Tell the user how many letetrs are in the word.
-  console.log(gameTextColor('Your word contains ' + randomword.length + ' Letters.'));
+  console.log(gameTextColor('Your word contains ' + randomWord.length + ' Letters.'));
   console.log(gameTextColor('WORD TO GUESS: '));
 
   // use the Word constructor in Word.js to split the word and generate letters.
@@ -185,8 +187,8 @@ function guessLetter(){
 
         // loop through all the letters in the word
         // determine if the letter that was guessed matches one of the letters in the word.
-        for (i = 0; i < someWord.letters.length; ++i){
-          if (guess.letter.toUpperCase() === someWord.letters[i].inputCharacter && someWord.letters[i].letterGuessedCorrectly === false){
+        for (i = 0; i < someWord.letters.length; i++){
+          if (guess.letter.toUpperCase() === someWord.letters[i].character && someWord.letters[i].letterGuessedCorrectly === false){
             someWord.letters[i].letterGuessedCorrectly = true;
             //set userguessedCorrectly to true
             userGuessedCorrectly = true;
@@ -203,7 +205,7 @@ function guessLetter(){
          if (userGuessedCorrectly){
            // Tell user they are Correct(letter is in the word they are trying to guess)
            console.log(correct('CORRECT! '));
-           console.log(gameTextColor("====================================================================="));
+           console.log(gameTextColor("==========================================================================================================="));
            // after each letter guess, check if the user won or lost.
            checkIfUserWon();
          }// else if user guessed incorrectly...
@@ -213,7 +215,7 @@ function guessLetter(){
            // Decrease number of guesses remaining by 1 and display number of guesses remaining
            guessesRemaining--;
            console.log(gameTextColor("You have " + guessesRemaining + " guesses left."));
-           console.log(gameTextColor("====================================================================="));
+           console.log(gameTextColor("==========================================================================================================="));
            // after each letter guess, check if the user won or lost.
            checkIfUserWon();
          }
@@ -226,28 +228,28 @@ function guessLetter(){
 
 function checkIfUserWon(){
   if (guessesRemaining === 0){
-    console.log(gameTextColor("====================================================================="));
+    console.log(gameTextColor("==========================================================================================================="));
     console.log(incorrect("YOU LOST! DON'T BE LIKE MR. SCROOGE!"));
-    console.log(gameTextColor("The correct word was: "+ randomword));
+    console.log(gameTextColor("The correct word was: "+ randomWord));
     //increment loses by 1
     losses++;
     //Display wins and losses totals
     console.log(gameTextColor('Wins: '+wins));
     console.log(gameTextColor('Losses: '+losses));
-    console.log(gameTextColor("====================================================================="));
+    console.log(gameTextColor("==========================================================================================================="));
     // ask if the user wants to play again?
     playAgain();
   }
   //else if the number of slots are filled with a letter equals the number of letters in the word, the user won.
   else if(slotsFilledIn === someWord.letters.length){
-    console.log(gameTextColor("====================================================================="));
+    console.log(gameTextColor("==========================================================================================================="));
     console.log(gameTextColor('YOU WON! MERRY CHRISTMAS!'));
     //INCREMENT wins by 1
     wins++;
     // show total wins and loses
     console.log(gameTextColor('Wins: '+wins));
     console.log(gameTextColor('Losses: '+losses));
-    console.log(gameTextColor("====================================================================="));
+    console.log(gameTextColor("==========================================================================================================="));
         // ask if the user wants to play again?
         playAgain();
   }

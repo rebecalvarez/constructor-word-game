@@ -10,15 +10,15 @@
 // A function that takes a character as an argument and checks it against the underlying character, 
 // updating the stored boolean value to true if it was guessed correctly
 
-var Letter = function(inputCharacter) {
+var Letter = function(character) {
    
-    this.inputCharacter = inputCharacter.toUpperCase();
-    this.guessed = false;
-    this.returnCharacter = function() {
-        if(this.guessed){  
-            console.log(inputCharacter);
+    this.character = character.toUpperCase();
+    this.letterGuessedCorrectly =false;
+    this.showCharacter = function() {
+        if(this.letterGuessedCorrectly){  
+            console.log(this.character);
         }else {
-            console.log("_");
+           // console.log("_");
         }
 
     }
