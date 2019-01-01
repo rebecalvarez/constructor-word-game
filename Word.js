@@ -10,7 +10,7 @@ var Word = function(myWord){
     numberUnderscoresNeeded = this.letters.length;
     console.log(this.underscores.join(''));
   } 
-  this.gerateLetters = function(){
+  this.generateLetters = function(){
     for (i=0; i< this.letters.length; i++){
       this.letters[i] = new Letter(this.letters[i]);
       this.letters[i].showCharacter();
