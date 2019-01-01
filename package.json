@@ -22,7 +22,10 @@
   },
   "homepage": "https://github.com/rebecalvarez/constructor-word-game#readme",
   "dependencies": {
+    "boxen": "^2.1.0",
     "cli-color": "^1.4.0",
-    "inquirer": "^6.2.1"
+    "figlet": "^1.2.1",
+    "inquirer": "^6.2.1",
+    "is-letter": "^1.1.1"
   }
 }
