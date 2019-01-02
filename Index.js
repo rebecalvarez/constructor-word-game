@@ -66,19 +66,20 @@ figlet('Christmas Word Game', function(err, data){
   console.log(correct(data));
   //Welcome Screen text
   console.log(startGameMenu('                                  Welcome to Christmas Word Guess Game'));
+  console.log(startGameMenu('                                            by Rebeca Dodero'));
 
 
   var howToPlay = 
   "==========================================================================================================" + "\r\n" +
   "                                                How to play" + "\r\n" +
   "==========================================================================================================" + "\r\n" +
-  "When prompted to enter a letter, press any letter (a-z) on the keyboard to guess a letter." + "\r\n" +
-  "Keep guessing letters. When you guess a letter, your choice is either correct or incorrect." + "\r\n" +
-  "If incorrect, the letter you guessed does not appear in the word." + "\r\n" + 
-  "For every incorrect guess, the number of guesses remaining decrease by 1." + "\r\n" +
-  "If correct, the letter you guessed appears in the word." + "\r\n" +
-  "If you correctly guess all the letters in the word before the number of guesses remaining reaches 0, you win." + "\r\n" +
-  "If you run out of guesses before the entire word is revealed, you lose. Game over." + "\r\n" +
+  "• When prompted to enter a letter, press any letter (a-z) on the keyboard to guess a letter." + "\r\n" +
+  "• Keep guessing letters. When you guess a letter, your choice is either correct or incorrect." + "\r\n" +
+  "• If incorrect, the letter you guessed does not appear in the word." + "\r\n" + 
+  "• For every incorrect guess, the number of guesses remaining decrease by 1." + "\r\n" +
+  "• If correct, the letter you guessed appears in the word." + "\r\n" +
+  "• If you correctly guess all the letters in the word before the number of guesses remaining reaches 0, you win." + "\r\n" +
+  "• If you run out of guesses before the entire word is revealed, you lose. Game over." + "\r\n" +
   "===========================================================================================================" + "\r\n" +
   "                You can exit the game at any time by pressing Ctrl + C on your keyboard." + "\r\n" +
   "===========================================================================================================" 
