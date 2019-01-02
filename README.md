@@ -18,25 +18,4 @@ This project is a command line version of a Word guessing game. This is a comman
 ## <a name="demo"></a> Demo
 Video demo: https://www.youtube.com/watch?v=mgBTgJYXmkc
 
-  ____ _          _     _                        __        __            _    ____
-  / ___| |__  _ __(_)___| |_ _ __ ___   __ _ ___  \ \      / /__  _ __ __| |  / ___| __ _ _ __ ___   ___
- | |   | '_ \| '__| / __| __| '_ ` _ \ / _` / __|  \ \ /\ / / _ \| '__/ _` | | |  _ / _` | '_ ` _ \ / _ \
- | |___| | | | |  | \__ \ |_| | | | | | (_| \__ \   \ V  V / (_) | | | (_| | | |_| | (_| | | | | | |  __/
-  \____|_| |_|_|  |_|___/\__|_| |_| |_|\__,_|___/    \_/\_/ \___/|_|  \__,_|  \____|\__,_|_| |_| |_|\___|
-
-                                  Welcome to Christmas Word Guess Game
-                                            by Rebeca Dodero
-==========================================================================================================
-                                                How to play
-==========================================================================================================
-• When prompted to enter a letter, press any letter (a-z) on the keyboard to guess a letter.
-• Keep guessing letters. When you guess a letter, your choice is either correct or incorrect.
-• If incorrect, the letter you guessed does not appear in the word.
-• For every incorrect guess, the number of guesses remaining decrease by 1.
-• If correct, the letter you guessed appears in the word.
-• If you correctly guess all the letters in the word before the number of guesses remaining reaches 0, you win.
-• If you run out of guesses before the entire word is revealed, you lose. Game over.
-===========================================================================================================
-                You can exit the game at any time by pressing Ctrl + C on your keyboard.
-===========================================================================================================
-? What is your name?
+![WordGame screen shot](demo.png)
