@@ -18,4 +18,4 @@ This project is a command line version of a Word guessing game. This is a comman
 ## <a name="demo"></a> Demo
 Video demo: https://www.youtube.com/watch?v=mgBTgJYXmkc
 
-![WordGame screen shot](demo.png)
+![Word Game screen shot](demo.jpg)
